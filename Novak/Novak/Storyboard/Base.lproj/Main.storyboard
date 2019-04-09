@@ -31,40 +31,17 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="4sR-5r-ggK" firstAttribute="centerX" secondItem="9gx-dX-CEb" secondAttribute="centerX" id="QyQ-4c-jj8"/>
+                                    <constraint firstAttribute="height" constant="135.5" id="gan-5T-3zo"/>
                                     <constraint firstItem="4sR-5r-ggK" firstAttribute="centerY" secondItem="9gx-dX-CEb" secondAttribute="centerY" id="s3J-wc-Dtl"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Проблеми з підключенням до інтернету" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBR-ao-PvY">
-                                <rect key="frame" x="20" y="199.5" width="335" height="268"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptE-bZ-iHk" customClass="TwitchPlayer" customModule="TwitchPlayer">
-                                <rect key="frame" x="20" y="199.5" width="335" height="268"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ptE-bZ-iHk" secondAttribute="height" multiplier="100:80" id="gEf-QG-Ebz"/>
-                                </constraints>
-                                <wkWebViewConfiguration key="configuration" allowsInlineMediaPlayback="YES">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" audio="YES" video="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showingChatPanel" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="playerThemeIsDark" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="chatModeIsMobile" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsFullScreen" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="channelToLoad" value="novaktvradio"/>
-                                </userDefinedRuntimeAttributes>
-                            </wkWebView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-zE-1ej" userLabel="Bottom View">
-                                <rect key="frame" x="0.0" y="467.5" width="375" height="150.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-zE-1ej" userLabel="Button View">
+                                <rect key="frame" x="0.0" y="240" width="375" height="187.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMa-lM-Vlg" userLabel="Play Button">
-                                        <rect key="frame" x="135" y="22.5" width="105" height="105.5"/>
+                                        <rect key="frame" x="94" y="0.0" width="187.5" height="187.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="tMa-lM-Vlg" secondAttribute="height" multiplier="1:1" id="oDS-aS-fWK"/>
+                                            <constraint firstAttribute="width" secondItem="tMa-lM-Vlg" secondAttribute="height" multiplier="1:1" id="vsv-Kc-b5t"/>
                                         </constraints>
                                         <state key="normal" image="playButton"/>
                                         <connections>
@@ -75,33 +52,25 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="tMa-lM-Vlg" firstAttribute="centerY" secondItem="zzc-zE-1ej" secondAttribute="centerY" id="5Bz-PW-Edc"/>
-                                    <constraint firstItem="tMa-lM-Vlg" firstAttribute="height" secondItem="zzc-zE-1ej" secondAttribute="height" multiplier="0.7" id="BVl-5H-8as"/>
+                                    <constraint firstItem="tMa-lM-Vlg" firstAttribute="top" secondItem="zzc-zE-1ej" secondAttribute="top" id="UsX-jn-ysL"/>
+                                    <constraint firstItem="tMa-lM-Vlg" firstAttribute="width" secondItem="zzc-zE-1ej" secondAttribute="width" multiplier="0.5" id="gdb-Q4-kAG"/>
+                                    <constraint firstAttribute="bottom" secondItem="tMa-lM-Vlg" secondAttribute="bottom" id="tMm-kF-pCM"/>
                                     <constraint firstItem="tMa-lM-Vlg" firstAttribute="centerX" secondItem="zzc-zE-1ej" secondAttribute="centerX" id="vbJ-gh-qy2"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zBR-ao-PvY" firstAttribute="centerY" secondItem="ptE-bZ-iHk" secondAttribute="centerY" id="80m-7y-xTa"/>
                             <constraint firstItem="MRu-fo-KLR" firstAttribute="top" secondItem="82L-5O-EOy" secondAttribute="top" id="BRQ-ZO-9Up"/>
                             <constraint firstItem="MRu-fo-KLR" firstAttribute="leading" secondItem="82L-5O-EOy" secondAttribute="leading" id="FIL-FR-UDZ"/>
                             <constraint firstAttribute="bottom" secondItem="MRu-fo-KLR" secondAttribute="bottom" id="Hoe-O8-xmD"/>
-                            <constraint firstItem="ptE-bZ-iHk" firstAttribute="centerX" secondItem="82L-5O-EOy" secondAttribute="centerX" id="L40-hH-c0R"/>
-                            <constraint firstItem="zzc-zE-1ej" firstAttribute="top" secondItem="ptE-bZ-iHk" secondAttribute="bottom" id="Pch-Jp-9RO"/>
-                            <constraint firstItem="wEF-Ay-qXE" firstAttribute="trailing" secondItem="ptE-bZ-iHk" secondAttribute="trailing" constant="20" id="V68-7H-Do6"/>
-                            <constraint firstItem="wEF-Ay-qXE" firstAttribute="trailing" secondItem="zzc-zE-1ej" secondAttribute="trailing" id="W5p-nY-mUW"/>
-                            <constraint firstItem="zBR-ao-PvY" firstAttribute="height" secondItem="ptE-bZ-iHk" secondAttribute="height" id="YZ0-uG-eie"/>
-                            <constraint firstItem="ptE-bZ-iHk" firstAttribute="leading" secondItem="wEF-Ay-qXE" secondAttribute="leading" constant="20" id="bGb-xN-qUC"/>
-                            <constraint firstItem="ptE-bZ-iHk" firstAttribute="centerY" secondItem="82L-5O-EOy" secondAttribute="centerY" id="gFO-0p-OEm"/>
-                            <constraint firstItem="zBR-ao-PvY" firstAttribute="width" secondItem="ptE-bZ-iHk" secondAttribute="width" id="mCE-tQ-Ne2"/>
+                            <constraint firstItem="zzc-zE-1ej" firstAttribute="centerY" secondItem="82L-5O-EOy" secondAttribute="centerY" id="LGO-b9-vcx"/>
+                            <constraint firstItem="zzc-zE-1ej" firstAttribute="centerX" secondItem="82L-5O-EOy" secondAttribute="centerX" id="Ly7-Pt-rTE"/>
+                            <constraint firstItem="zzc-zE-1ej" firstAttribute="width" secondItem="82L-5O-EOy" secondAttribute="width" id="PPi-hb-k2M"/>
                             <constraint firstItem="9gx-dX-CEb" firstAttribute="top" secondItem="wEF-Ay-qXE" secondAttribute="top" id="mc7-dy-3OK"/>
-                            <constraint firstItem="ptE-bZ-iHk" firstAttribute="top" secondItem="9gx-dX-CEb" secondAttribute="bottom" id="miL-Ck-6jq"/>
                             <constraint firstAttribute="trailing" secondItem="MRu-fo-KLR" secondAttribute="trailing" id="nMw-Dq-RWE"/>
                             <constraint firstItem="wEF-Ay-qXE" firstAttribute="trailing" secondItem="9gx-dX-CEb" secondAttribute="trailing" id="oW8-96-W9c"/>
-                            <constraint firstItem="wEF-Ay-qXE" firstAttribute="bottom" secondItem="zzc-zE-1ej" secondAttribute="bottom" id="okE-cM-WbS"/>
                             <constraint firstItem="9gx-dX-CEb" firstAttribute="leading" secondItem="wEF-Ay-qXE" secondAttribute="leading" id="rVo-cv-RUC"/>
-                            <constraint firstItem="zBR-ao-PvY" firstAttribute="centerX" secondItem="ptE-bZ-iHk" secondAttribute="centerX" id="ucx-CT-25e"/>
-                            <constraint firstItem="zzc-zE-1ej" firstAttribute="leading" secondItem="wEF-Ay-qXE" secondAttribute="leading" id="ugJ-yg-jEA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wEF-Ay-qXE"/>
                     </view>
@@ -114,9 +83,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="twitchPlayer" destination="ptE-bZ-iHk" id="oMR-ad-jdO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERX-8r-Taf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,7 +204,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PnX-ye-imz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1494" y="149"/>
+            <point key="canvasLocation" x="-695" y="161"/>
         </scene>
         <!--Відео-->
         <scene sceneID="qea-pB-z8C">

@@ -60,12 +60,10 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.6.1)
-  - TwitchPlayer (0.2.0)
 
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Messaging
-  - TwitchPlayer
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -79,7 +77,6 @@ SPEC REPOS:
     - GoogleUtilities
     - nanopb
     - Protobuf
-    - TwitchPlayer
 
 SPEC CHECKSUMS:
   Firebase: 59d557e064217fab6a03ff00baa73c06e73832e6
@@ -92,8 +89,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
-  TwitchPlayer: 9317f5232c28dad2acf01e36d4de263baa17dbf6
 
-PODFILE CHECKSUM: 75612a876195ddcfbbf78328a86cc7b2654d600a
+PODFILE CHECKSUM: eb448b5f7ffd30ae5064bda8c2dc7211e89bfa74
 
 COCOAPODS: 1.5.3
