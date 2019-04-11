@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A0D5142225730B3000A1EFF /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0D5141225730B3000A1EFF /* InfoVC.swift */; };
 		5A15C09B2232B16B00D5E69E /* PushVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15C09A2232B16B00D5E69E /* PushVC.swift */; };
 		5A15C0A12232CD6100D5E69E /* PushTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15C09F2232CD6100D5E69E /* PushTableViewCell.swift */; };
 		5A15C0A22232CD6100D5E69E /* PushTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A15C0A02232CD6100D5E69E /* PushTableViewCell.xib */; };
@@ -19,12 +18,13 @@
 		5A3776AB22327CBC00DE5D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3776AA22327CBC00DE5D76 /* Assets.xcassets */; };
 		5A3776AE22327CBC00DE5D76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3776AC22327CBC00DE5D76 /* LaunchScreen.storyboard */; };
 		5A59AFDA224B769D00256C2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A59AFD9224B769D00256C2F /* GoogleService-Info.plist */; };
+		5A8E1041225FCB5200F5E786 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E1040225FCB5200F5E786 /* PlayerView.swift */; };
+		5A8E1043225FCB7D00F5E786 /* UIView + Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E1042225FCB7D00F5E786 /* UIView + Controller.swift */; };
 		5AC3DBFE2232A02D00C5B994 /* UINavigationBar + Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC3DBFD2232A02D00C5B994 /* UINavigationBar + Transparent.swift */; };
 		5D7371BA586F8274F1A60B66 /* Pods_Novak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6044EEAF698C70FF95750F57 /* Pods_Novak.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5A0D5141225730B3000A1EFF /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 		5A15C09A2232B16B00D5E69E /* PushVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushVC.swift; sourceTree = "<group>"; };
 		5A15C09F2232CD6100D5E69E /* PushTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTableViewCell.swift; sourceTree = "<group>"; };
 		5A15C0A02232CD6100D5E69E /* PushTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushTableViewCell.xib; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		5A3776AD22327CBC00DE5D76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A3776AF22327CBC00DE5D76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A59AFD9224B769D00256C2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5A8E1040225FCB5200F5E786 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		5A8E1042225FCB7D00F5E786 /* UIView + Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Controller.swift"; sourceTree = "<group>"; };
 		5AC3DBFD2232A02D00C5B994 /* UINavigationBar + Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar + Transparent.swift"; sourceTree = "<group>"; };
 		5AE67F7D223282580036DA86 /* Novak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Novak.entitlements; sourceTree = "<group>"; };
 		6044EEAF698C70FF95750F57 /* Pods_Novak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Novak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,17 +76,10 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
-		5A0D5140225730A2000A1EFF /* Info */ = {
-			isa = PBXGroup;
-			children = (
-				5A0D5141225730B3000A1EFF /* InfoVC.swift */,
-			);
-			path = Info;
-			sourceTree = "<group>";
-		};
 		5A15C09C2232CD2100D5E69E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5A8E103F225FCB4100F5E786 /* PlayerView */,
 				5A15C09D2232CD2600D5E69E /* TableViewCell */,
 			);
 			path = View;
@@ -168,7 +163,6 @@
 		5A3776B522327D8C00DE5D76 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5A0D5140225730A2000A1EFF /* Info */,
 				5A0D513F22573098000A1EFF /* Video */,
 			);
 			path = Controller;
@@ -193,10 +187,19 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		5A8E103F225FCB4100F5E786 /* PlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				5A8E1040225FCB5200F5E786 /* PlayerView.swift */,
+			);
+			path = PlayerView;
+			sourceTree = "<group>";
+		};
 		5AC3DBFC2232A01600C5B994 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				5AC3DBFD2232A02D00C5B994 /* UINavigationBar + Transparent.swift */,
+				5A8E1042225FCB7D00F5E786 /* UIView + Controller.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -345,9 +348,10 @@
 				5A15C0AB2232F28D00D5E69E /* Reachability.swift in Sources */,
 				5A15C09B2232B16B00D5E69E /* PushVC.swift in Sources */,
 				5AC3DBFE2232A02D00C5B994 /* UINavigationBar + Transparent.swift in Sources */,
+				5A8E1041225FCB5200F5E786 /* PlayerView.swift in Sources */,
 				5A15C0A52232D3F800D5E69E /* Notification.swift in Sources */,
-				5A0D5142225730B3000A1EFF /* InfoVC.swift in Sources */,
 				5A3776A622327CBB00DE5D76 /* MainVC.swift in Sources */,
+				5A8E1043225FCB7D00F5E786 /* UIView + Controller.swift in Sources */,
 				5A15C0A12232CD6100D5E69E /* PushTableViewCell.swift in Sources */,
 				5A3776A422327CBB00DE5D76 /* AppDelegate.swift in Sources */,
 			);
