@@ -7,5 +7,6 @@ target 'Novak' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
+  pod 'TwitchPlayer'
 
 end
