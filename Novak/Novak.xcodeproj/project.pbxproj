@@ -18,6 +18,8 @@
 		5A3776AB22327CBC00DE5D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3776AA22327CBC00DE5D76 /* Assets.xcassets */; };
 		5A3776AE22327CBC00DE5D76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3776AC22327CBC00DE5D76 /* LaunchScreen.storyboard */; };
 		5A59AFDA224B769D00256C2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A59AFD9224B769D00256C2F /* GoogleService-Info.plist */; };
+		5A6A27552265137C00C7F9E6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A27542265137C00C7F9E6 /* LoginVC.swift */; };
+		5A6A27592265188B00C7F9E6 /* ErrorAlertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A27582265188B00C7F9E6 /* ErrorAlertable.swift */; };
 		5A8E1041225FCB5200F5E786 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E1040225FCB5200F5E786 /* PlayerView.swift */; };
 		5A8E1043225FCB7D00F5E786 /* UIView + Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8E1042225FCB7D00F5E786 /* UIView + Controller.swift */; };
 		5AC3DBFE2232A02D00C5B994 /* UINavigationBar + Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC3DBFD2232A02D00C5B994 /* UINavigationBar + Transparent.swift */; };
@@ -38,6 +40,8 @@
 		5A3776AD22327CBC00DE5D76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A3776AF22327CBC00DE5D76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A59AFD9224B769D00256C2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5A6A27542265137C00C7F9E6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		5A6A27582265188B00C7F9E6 /* ErrorAlertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertable.swift; sourceTree = "<group>"; };
 		5A8E1040225FCB5200F5E786 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		5A8E1042225FCB7D00F5E786 /* UIView + Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Controller.swift"; sourceTree = "<group>"; };
 		5AC3DBFD2232A02D00C5B994 /* UINavigationBar + Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar + Transparent.swift"; sourceTree = "<group>"; };
@@ -70,6 +74,7 @@
 		5A0D513F22573098000A1EFF /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				5A6A27542265137C00C7F9E6 /* LoginVC.swift */,
 				5A3776A522327CBB00DE5D76 /* MainVC.swift */,
 				5A15C09A2232B16B00D5E69E /* PushVC.swift */,
 			);
@@ -147,6 +152,7 @@
 		5A3776A222327CBB00DE5D76 /* Novak */ = {
 			isa = PBXGroup;
 			children = (
+				5A6A27572265187700C7F9E6 /* Protocol */,
 				5AE67F7D223282580036DA86 /* Novak.entitlements */,
 				5A3776A322327CBB00DE5D76 /* AppDelegate.swift */,
 				5A3776B522327D8C00DE5D76 /* Controller */,
@@ -185,6 +191,22 @@
 				5A59AFD9224B769D00256C2F /* GoogleService-Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		5A6A27562265185F00C7F9E6 /* ErrorAlertable */ = {
+			isa = PBXGroup;
+			children = (
+				5A6A27582265188B00C7F9E6 /* ErrorAlertable.swift */,
+			);
+			path = ErrorAlertable;
+			sourceTree = "<group>";
+		};
+		5A6A27572265187700C7F9E6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				5A6A27562265185F00C7F9E6 /* ErrorAlertable */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		5A8E103F225FCB4100F5E786 /* PlayerView */ = {
@@ -299,6 +321,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Novak/Pods-Novak-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/TwitchPlayer/TwitchPlayer.framework",
@@ -308,6 +331,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitchPlayer.framework",
@@ -351,6 +375,8 @@
 				5A15C09B2232B16B00D5E69E /* PushVC.swift in Sources */,
 				5AC3DBFE2232A02D00C5B994 /* UINavigationBar + Transparent.swift in Sources */,
 				5A8E1041225FCB5200F5E786 /* PlayerView.swift in Sources */,
+				5A6A27552265137C00C7F9E6 /* LoginVC.swift in Sources */,
+				5A6A27592265188B00C7F9E6 /* ErrorAlertable.swift in Sources */,
 				5A15C0A52232D3F800D5E69E /* Notification.swift in Sources */,
 				5A3776A622327CBB00DE5D76 /* MainVC.swift in Sources */,
 				5A8E1043225FCB7D00F5E786 /* UIView + Controller.swift in Sources */,

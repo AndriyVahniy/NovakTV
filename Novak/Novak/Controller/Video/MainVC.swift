@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 final class MainVC: UIViewController {
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		navigationController?.navigationBar.transparentNavigationBar()
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		navigationController?.setNavigationBarHidden(false, animated: true)
 	}
 }
 
@@ -21,6 +27,11 @@ final class MainVC: UIViewController {
 private extension MainVC {
 	@IBAction func sharePressed() {
 		shareLink()
+	}
+	
+	@IBAction func logout() {
+		try? Auth.auth().signOut()
+		navigationController?.popViewController(animated: true)
 	}
 }
 

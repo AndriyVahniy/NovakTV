@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xLI-sr-oRO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qgQ-r8-KIS">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -114,6 +114,12 @@
                         <viewLayoutGuide key="safeArea" id="wEF-Ay-qXE"/>
                     </view>
                     <navigationItem key="navigationItem" id="AUR-UA-jp7">
+                        <barButtonItem key="leftBarButtonItem" title="Вийти" id="Irb-Zc-1v1">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="logout" destination="u0h-GF-WGJ" id="fwI-q2-NH7"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="menu_button" id="H7g-gi-R02">
                             <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -121,10 +127,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERX-8r-Taf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207.2" y="-161.46926536731635"/>
+            <point key="canvasLocation" x="2203.125" y="-161.61971830985917"/>
         </scene>
         <!--PushVC-->
         <scene sceneID="vKK-sf-BpM">
@@ -174,28 +181,108 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVp-z8-IJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2130" y="-162"/>
+            <point key="canvasLocation" x="3127.5" y="-162.67605633802816"/>
         </scene>
-        <!--Відео-->
-        <scene sceneID="qea-pB-z8C">
+        <!--LoginVC-->
+        <scene sceneID="1k7-XJ-Dg9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xLI-sr-oRO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Відео" image="videoTab" id="mTm-vc-K7S">
-                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
+                <viewController storyboardIdentifier="LoginVC" id="UIK-gQ-cfp" customClass="LoginVC" customModule="Novak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ofa-vF-idy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ibi-G4-7uK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-CQ-W47">
+                                <rect key="frame" x="20" y="194" width="280" height="180"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZkK-eN-zKT">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="80"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Електронна пошта" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NdS-BQ-pu8">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="UIK-gQ-cfp" id="Ib4-Lh-KiB"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0lr-ID-p6p">
+                                                <rect key="frame" x="0.0" y="50" width="280" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="UIK-gQ-cfp" id="nwe-2m-zly"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qzx-BW-MCR">
+                                        <rect key="frame" x="0.0" y="100" width="280" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8D-Ka-FBp">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
+                                                <state key="normal" title="Зареєструватись"/>
+                                                <connections>
+                                                    <action selector="registerPressed" destination="UIK-gQ-cfp" eventType="touchUpInside" id="qXl-Jq-d6l"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAe-6O-p7f">
+                                                <rect key="frame" x="0.0" y="50" width="280" height="30"/>
+                                                <state key="normal" title="Увійти"/>
+                                                <connections>
+                                                    <action selector="loginPressed" destination="UIK-gQ-cfp" eventType="touchUpInside" id="3MI-DP-IYi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ibi-G4-7uK" firstAttribute="bottom" secondItem="Ofa-vF-idy" secondAttribute="bottom" id="1Kc-WS-oFl"/>
+                            <constraint firstItem="bsB-CQ-W47" firstAttribute="centerX" secondItem="Ofa-vF-idy" secondAttribute="centerX" id="K7z-Gp-o9k"/>
+                            <constraint firstItem="ibi-G4-7uK" firstAttribute="trailing" secondItem="Ofa-vF-idy" secondAttribute="trailing" id="Lcu-Z6-n9I"/>
+                            <constraint firstItem="ibi-G4-7uK" firstAttribute="top" secondItem="Ofa-vF-idy" secondAttribute="top" id="b9N-zF-DlN"/>
+                            <constraint firstItem="ibi-G4-7uK" firstAttribute="leading" secondItem="Ofa-vF-idy" secondAttribute="leading" id="elX-Qq-gEY"/>
+                            <constraint firstItem="Xff-tD-F3b" firstAttribute="trailing" secondItem="bsB-CQ-W47" secondAttribute="trailing" constant="20" id="rYX-Zy-Sep"/>
+                            <constraint firstItem="bsB-CQ-W47" firstAttribute="centerY" secondItem="Ofa-vF-idy" secondAttribute="centerY" id="vQc-Vo-FFd"/>
+                            <constraint firstItem="bsB-CQ-W47" firstAttribute="leading" secondItem="Xff-tD-F3b" secondAttribute="leading" constant="20" id="yKf-2J-xX7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xff-tD-F3b"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wxt-xd-PYm"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="NdS-BQ-pu8" id="jqR-d8-0HS"/>
+                        <outlet property="passwordTextField" destination="0lr-ID-p6p" id="8Bs-FR-PDu"/>
+                        <segue destination="u0h-GF-WGJ" kind="show" identifier="showMainVCAnimated" id="mKj-tG-bks"/>
+                        <segue destination="u0h-GF-WGJ" kind="show" identifier="showMainVC" animates="NO" id="0ff-hN-SKT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKc-aS-6tv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351.875" y="-163.73239436619718"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7E8-oY-eTM">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9WU-Vt-VeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="qgQ-r8-KIS" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X2e-od-6mE">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="97d-Cm-WhI">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="u0h-GF-WGJ" kind="relationship" relationship="rootViewController" id="bSJ-B0-7rL"/>
+                        <segue destination="UIK-gQ-cfp" kind="relationship" relationship="rootViewController" id="OH4-N6-crT"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vPB-GM-oAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="268" y="-161.46926536731635"/>
+            <point key="canvasLocation" x="354.375" y="-163.73239436619718"/>
         </scene>
     </scenes>
     <resources>
@@ -204,6 +291,8 @@
         <image name="logo" width="313" height="109.5"/>
         <image name="menu_button" width="18" height="12"/>
         <image name="share" width="50" height="50"/>
-        <image name="videoTab" width="24" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0ff-hN-SKT"/>
+    </inferredMetricsTieBreakers>
 </document>
