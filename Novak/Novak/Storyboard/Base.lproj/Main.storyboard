@@ -64,11 +64,35 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7BV-YL-So4" userLabel="Bottom View">
                                 <rect key="frame" x="0.0" y="390.5" width="320" height="177.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="c90-8Z-8zl">
-                                        <rect key="frame" x="125" y="54" width="70" height="70"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="c90-8Z-8zl">
+                                        <rect key="frame" x="45" y="54" width="230" height="70"/>
                                         <subviews>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sb4-Jb-KrX">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                                <state key="normal" image="youtube"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="youtubePressed" destination="u0h-GF-WGJ" eventType="touchUpInside" id="sn0-qm-Kcs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCl-vm-EI4">
+                                                <rect key="frame" x="80" y="0.0" width="70" height="70"/>
+                                                <state key="normal" image="facebook"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="facebookPressed" destination="u0h-GF-WGJ" eventType="touchUpInside" id="kch-uC-Ocf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWx-LT-aGb">
+                                                <rect key="frame" x="160" y="0.0" width="70" height="70"/>
                                                 <state key="normal" image="share"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -76,13 +100,15 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="sharePressed" destination="u0h-GF-WGJ" eventType="touchUpInside" id="C8q-dU-kf1"/>
+                                                    <action selector="sharePressed" destination="u0h-GF-WGJ" eventType="touchUpInside" id="il2-70-z62"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="RWx-LT-aGb" firstAttribute="width" secondItem="RWx-LT-aGb" secondAttribute="height" multiplier="1:1" id="1Qm-AM-Gi5"/>
                                             <constraint firstItem="sb4-Jb-KrX" firstAttribute="width" secondItem="sb4-Jb-KrX" secondAttribute="height" multiplier="1:1" id="3yx-lG-Ctb"/>
                                             <constraint firstAttribute="height" constant="70" id="BMN-xt-HYO"/>
+                                            <constraint firstItem="zCl-vm-EI4" firstAttribute="width" secondItem="zCl-vm-EI4" secondAttribute="height" multiplier="1:1" id="fER-wi-GWD"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -194,6 +220,19 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ibi-G4-7uK">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yT4-2Y-8cj" userLabel="Top View">
+                                <rect key="frame" x="0.0" y="20" width="320" height="157"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="TlS-wL-yDs">
+                                        <rect key="frame" x="3.5" y="24" width="313" height="109.5"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="TlS-wL-yDs" firstAttribute="centerX" secondItem="yT4-2Y-8cj" secondAttribute="centerX" id="nPL-tw-EEJ"/>
+                                    <constraint firstItem="TlS-wL-yDs" firstAttribute="centerY" secondItem="yT4-2Y-8cj" secondAttribute="centerY" id="s3D-Bw-QcM"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-CQ-W47">
                                 <rect key="frame" x="20" y="177" width="280" height="214"/>
                                 <subviews>
@@ -253,10 +292,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ibi-G4-7uK" firstAttribute="bottom" secondItem="Ofa-vF-idy" secondAttribute="bottom" id="1Kc-WS-oFl"/>
+                            <constraint firstItem="bsB-CQ-W47" firstAttribute="top" secondItem="yT4-2Y-8cj" secondAttribute="bottom" id="8vJ-tr-w0n"/>
                             <constraint firstItem="bsB-CQ-W47" firstAttribute="centerX" secondItem="Ofa-vF-idy" secondAttribute="centerX" id="K7z-Gp-o9k"/>
                             <constraint firstItem="ibi-G4-7uK" firstAttribute="trailing" secondItem="Ofa-vF-idy" secondAttribute="trailing" id="Lcu-Z6-n9I"/>
+                            <constraint firstAttribute="trailing" secondItem="yT4-2Y-8cj" secondAttribute="trailing" id="PBm-uU-hFy"/>
                             <constraint firstItem="ibi-G4-7uK" firstAttribute="top" secondItem="Ofa-vF-idy" secondAttribute="top" id="b9N-zF-DlN"/>
+                            <constraint firstItem="yT4-2Y-8cj" firstAttribute="leading" secondItem="Xff-tD-F3b" secondAttribute="leading" id="bkM-hT-gEx"/>
                             <constraint firstItem="ibi-G4-7uK" firstAttribute="leading" secondItem="Ofa-vF-idy" secondAttribute="leading" id="elX-Qq-gEY"/>
+                            <constraint firstItem="yT4-2Y-8cj" firstAttribute="top" secondItem="Xff-tD-F3b" secondAttribute="top" id="kL0-w2-TOg"/>
                             <constraint firstItem="Xff-tD-F3b" firstAttribute="trailing" secondItem="bsB-CQ-W47" secondAttribute="trailing" constant="20" id="rYX-Zy-Sep"/>
                             <constraint firstItem="bsB-CQ-W47" firstAttribute="centerY" secondItem="Ofa-vF-idy" secondAttribute="centerY" id="vQc-Vo-FFd"/>
                             <constraint firstItem="bsB-CQ-W47" firstAttribute="leading" secondItem="Xff-tD-F3b" secondAttribute="leading" constant="20" id="yKf-2J-xX7"/>
@@ -278,7 +321,6 @@
         <!--Navigation Controller-->
         <scene sceneID="7E8-oY-eTM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9WU-Vt-VeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="qgQ-r8-KIS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="97d-Cm-WhI">
@@ -289,6 +331,7 @@
                         <segue destination="UIK-gQ-cfp" kind="relationship" relationship="rootViewController" id="OH4-N6-crT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9WU-Vt-VeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="354.375" y="-163.73239436619718"/>
         </scene>
@@ -296,9 +339,11 @@
     <resources>
         <image name="arrow_left" width="18" height="12"/>
         <image name="background" width="375" height="667"/>
+        <image name="facebook" width="100" height="100"/>
         <image name="logo" width="313" height="109.5"/>
         <image name="menu_button" width="18" height="12"/>
         <image name="share" width="50" height="50"/>
+        <image name="youtube" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0ff-hN-SKT"/>

@@ -10,6 +10,10 @@ import UIKit
 import FirebaseAuth
 
 final class MainVC: UIViewController {
+	private let youtubeLink = "https://www.youtube.com/channel/UCwXADJO3zMteOqTcOodSzew"
+	private let facebbokLink = "https://www.facebook.com/novak.andriy.yaremovych"
+	private let shareLink = "https://www.twitch.tv/novaktvradio"
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -25,8 +29,16 @@ final class MainVC: UIViewController {
 
 //MARK: - @IBAction
 private extension MainVC {
+	@IBAction func youtubePressed() {
+		open(youtubeLink)
+	}
+	
+	@IBAction func facebookPressed() {
+		open(facebbokLink)
+	}
+	
 	@IBAction func sharePressed() {
-		shareLink()
+		share(shareLink)
 	}
 	
 	@IBAction func logout() {
@@ -37,15 +49,15 @@ private extension MainVC {
 
 //MARK: - Controller Helpers
 private extension MainVC {
-	func shareLink() {
-		let web = URL(string:"https://www.twitch.tv/novaktvradio") as Any
+	func share(_ shareLink: String) {
+		let web = URL(string: shareLink) as Any
 		let shareArray = [web]
 		let activityViewController = UIActivityViewController(activityItems: shareArray, applicationActivities: nil)
 		
 		self.present(activityViewController, animated: true, completion: nil)
 	}
 	
-	func open(link: String) {
+	func open(_ link: String) {
 		if let url = URL(string: link), UIApplication.shared.canOpenURL(url) {
 			UIApplication.shared.open(url, options: [:])
 		}
