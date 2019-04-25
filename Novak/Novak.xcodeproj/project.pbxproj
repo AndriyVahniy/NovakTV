@@ -152,7 +152,6 @@
 		5A3776A222327CBB00DE5D76 /* Novak */ = {
 			isa = PBXGroup;
 			children = (
-				5A6A27572265187700C7F9E6 /* Protocol */,
 				5AE67F7D223282580036DA86 /* Novak.entitlements */,
 				5A3776A322327CBB00DE5D76 /* AppDelegate.swift */,
 				5A3776B522327D8C00DE5D76 /* Controller */,
@@ -162,6 +161,7 @@
 				5A15C0A82232F26300D5E69E /* System */,
 				5AC3DBFC2232A01600C5B994 /* Extension */,
 				5A3776B722327DB800DE5D76 /* Resources */,
+				5A6A27572265187700C7F9E6 /* Protocol */,
 			);
 			path = Novak;
 			sourceTree = "<group>";
